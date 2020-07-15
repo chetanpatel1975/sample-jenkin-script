@@ -1,0 +1,25 @@
+node{
+    
+    stage('Build'){
+       sh label: '', script: 'echo  "Good Morning"'
+       sh lable: '', script: 'echo  "Build suceesfully"'
+    }
+    
+     stage('Test'){
+       sh 'echo  "Good Morning"'
+       sh 'echo  "Build suceesfully"'
+    }
+    stage('Code Review') {
+        sh 'echo "code review sucsscfully completed"'
+        sh 'echo "No warning while Code Review"'
+        sh 'echo "well done "'
+    }
+    
+    stage('Docker Build'){
+        sh 'echo "Docker file build successfully"'
+        sh 'echo "Docker Images created "'
+    }
+    
+    stage('Docker Push to Docker Hiub')
+    	sh 'echo "Docker image push to Docker HUB Successfully"'
+}
